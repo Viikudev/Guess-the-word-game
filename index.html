@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Guess The Word</title>
+    </head>
+    <body>
+        <main class="main-container">
+            <section class="header">
+                <img src="assets/Word Scramblle.svg" alt="" />
+            </section>
+            <section class="random-word">
+                <p>relowf</p>
+            </section>
+            <section class="tries-mistakes">
+                <div class="tries">
+                    Tries(4/5):
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="mistakes">
+                    <p>Mistakes:</p>
+                    <p>a,e,w,t</p>
+                </div>
+            </section>
+            <section class="complete-word">
+                <div id="word">
+                    <input id="first" class="letter" type="text" autofocus />
+                </div>
+            </section>
+            <section class="buttons">
+                <button class="random" type="button">Random</button>
+                <button class="reset" type="button">Reset</button>
+            </section>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
