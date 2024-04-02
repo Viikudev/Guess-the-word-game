@@ -72,6 +72,10 @@ body {
     border-radius: 1rem;
 }
 
+.tried {
+    background-color: #c951e7;
+}
+
 .complete-word {
     width: 80%;
     height: 60%;
@@ -94,6 +98,11 @@ body {
     border-radius: 0.5rem;
     align-content: center;
     text-align: center;
+}
+
+.letter:focus {
+    border: none;
+    outline: 2px solid #c951e7;
 }
 
 .buttons {
