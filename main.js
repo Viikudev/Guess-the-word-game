@@ -55,6 +55,7 @@ randomButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
     tries = 0;
+    i = 0;
     mistakes.innerHTML = "";
     dots.forEach((dot) => {
         dot.classList.remove("tried");
@@ -65,7 +66,7 @@ resetButton.addEventListener("click", () => {
     });
     letterArray[0].removeAttribute("disabled");
     letterArray[0].focus();
-    return tries;
+    return tries, i;
 });
 
 addEventListener("keyup", () => {
