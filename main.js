@@ -40,20 +40,7 @@ const letterList = (word) => {
     }
 };
 
-letterList(word);
-const letterListElement = wordContainer.querySelectorAll(".letter");
-const letterArray = Array.from(letterListElement);
-
-scrambledWord.innerHTML = shuffle(word);
-
-randomButton.addEventListener("click", () => {
-    word = words[Math.floor(Math.random() * words.length)];
-    scrambledWord.innerHTML = shuffle(word);
-    letterList(word);
-    const firstLetter = document.getElementById("first").focus();
-});
-
-resetButton.addEventListener("click", () => {
+const reset = () => {
     tries = 0;
     i = 0;
     mistakes.innerHTML = "";
@@ -67,6 +54,24 @@ resetButton.addEventListener("click", () => {
     letterArray[0].removeAttribute("disabled");
     letterArray[0].focus();
     return tries, i;
+};
+
+letterList(word);
+const letterListElement = wordContainer.querySelectorAll(".letter");
+const letterArray = Array.from(letterListElement);
+
+scrambledWord.innerHTML = shuffle(word);
+
+randomButton.addEventListener("click", () => {
+    word = words[Math.floor(Math.random() * words.length)];
+    scrambledWord.innerHTML = shuffle(word);
+    letterList(word);
+    const firstLetter = document.getElementById("first").focus();
+    reset();
+});
+
+resetButton.addEventListener("click", () => {
+    reset();
 });
 
 addEventListener("keyup", () => {
