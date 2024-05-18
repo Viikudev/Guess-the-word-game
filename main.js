@@ -9,6 +9,8 @@ const dots = document.querySelectorAll('.dot')
 const dotsArray = Array.from(dots)
 const startButton = document.querySelector('.start')
 const continueButton = document.querySelector('.continue')
+const winsCounter = document.querySelector('.wins')
+const losesCounter = document.querySelector('.loses')
 let scrambledWord = document.querySelector('.random-word')
 
 async function fetchWord() {
@@ -57,6 +59,8 @@ async function letterList(word) {
 ;(async () => {
   let i = 0
   let tries = 0
+  let wins = 0
+  let loses = 0
 
   let word = await fetchWord()
   const wordSorted = shuffle(word)
@@ -123,8 +127,11 @@ async function letterList(word) {
 
   addEventListener('keyup', () => {
     console.log(word)
+    letterArray[i].value = letterArray[i].value.toLowerCase()
     if (letterArray[i].value.length === 1 && letterArray[i].value === word[i]) {
       if (letterArray[i].getAttribute('position') == word.length) {
+        wins = wins + 1
+        winsCounter.innerHTML = `Wins: ${wins}`
         winLoseContainer.firstElementChild.innerHTML = 'YOU WIN!!!'
         winLoseContainer.style.display = 'flex'
         return
@@ -137,6 +144,8 @@ async function letterList(word) {
       dotsArray[tries].classList.add('tried')
       tries++
       if (tries === 5) {
+        loses = loses + 1
+        losesCounter.innerHTML = `Loses: ${loses}`
         winLoseContainer.firstElementChild.innerHTML = 'YOU LOSE...'
         winLoseContainer.style.display = 'flex'
         return
