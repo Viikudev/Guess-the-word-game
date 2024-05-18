@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Guess The Word</title>
-    </head>
-    <body>
-        <main class="main-container">
-            <section class="header">
-                <img src="assets/Word Scramblle.svg" alt="" />
-            </section>
-            <section class="random-word">
-                <p>relowf</p>
-            </section>
-            <section class="tries-mistakes">
-                <div class="tries">
-                    <p class="tries-text">Tries(0/5):</p>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-                <div class="mistakes">
-                    <p>Mistakes:</p>
-                    <p class="letters-tried"></p>
-                </div>
-            </section>
-            <section class="complete-word">
-                <div id="word">
-                    <input
-                        id="first"
-                        class="letter"
-                        type="text"
-                        size="1"
-                        maxlength="1"
-                        autofocus
-                    />
-                </div>
-            </section>
-            <section class="buttons">
-                <button class="random" type="button">Random</button>
-                <button class="reset" type="button">Reset</button>
-            </section>
-        </main>
-        <script src="main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess The Word</title>
+  </head>
+  <body>
+    <!-- START GAME -->
+    <div class="start-container">
+      <h1>WELCOME TO SCRAMBLLE WORD!</h1>
+      <button class="start" type="button">Start Game!</button>
+    </div>
+
+    <!-- WIN MODAL  -->
+    <div id="winlose-container">
+      <h3></h3>
+      <button class="continue" type="button">Continue</button>
+    </div>
+
+    <main class="main-container">
+      <section class="header">
+        <img src="assets/Word Scramblle.svg" alt="" />
+      </section>
+      <section class="random-word">
+        <p class="shuffled-word"></p>
+      </section>
+      <section class="tries-mistakes">
+        <div class="tries">
+          <p class="tries-text">Tries(0/5):</p>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="mistakes">
+          <p>Mistakes:</p>
+          <p class="letters-tried"></p>
+        </div>
+      </section>
+      <section class="complete-word">
+        <div id="word">
+          <input
+            id="first"
+            class="letter"
+            type="text"
+            size="1"
+            maxlength="1"
+            autofocus
+          />
+        </div>
+      </section>
+      <section class="buttons">
+        <button class="random" type="button">Random</button>
+        <button class="reset" type="button">Reset</button>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
