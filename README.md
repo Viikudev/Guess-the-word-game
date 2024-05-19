@@ -21,7 +21,7 @@ I learned a lot of the logical programming, how to use the browser to find infor
 ## Author ✒️
 **Victor Samuel**
 
-* [micorreo@midominio.com](victoress18@gmail.com)
+* [victoress18@gmail.com](victoress18@gmail.com)
 * [LinkedIn](www.linkedin.com/in/victoresamuel)
 
 ## Instalation
