@@ -1,7 +1,7 @@
 # Guess the word
 
 ## Live Example
-- [URL-de-github-pages-de-este-proyecto](https://victoresamuel.github.io/Guess-the-word-game/)
+- [LINK-to-Guess-the-word-game](https://victoresamuel.github.io/Guess-the-word-game/)
 
 ## Description 📑
 
