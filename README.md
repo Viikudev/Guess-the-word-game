@@ -26,6 +26,6 @@ I learned a lot of the logical programming, how to use the browser to find infor
 
 ## Instalation
 
-* Node.js is nooded to run this project locally, you can domnload it [here](https://nodejs.org/en)
+* Node.js is needed to run this project locally, you can domnload it [here](https://nodejs.org/en)
 * Go to the root of the project and execute the command in the terminal "node install"
 * Execute the command "npm run dev" and open the link in the browser.
